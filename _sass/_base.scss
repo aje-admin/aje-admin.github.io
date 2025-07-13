@@ -23,7 +23,7 @@ a {
     color: $theme-primary;
     &:hover,
     &:focus {
-        color: darken($theme-primary, 10%);
+        color: scale($theme-primary, 10%);
     }
 }
 
@@ -81,7 +81,7 @@ aside {
         text-transform: uppercase;
         &:hover,
         &:focus {
-            color: darken($theme-primary, 10%);
+            color: scale($theme-primary, 10%);
         }
     }
     .nav {
@@ -133,7 +133,7 @@ aside {
                 font-size: 14px;
                 &:hover,
                 &:focus {
-                    color: darken($theme-primary, 10%);
+                    color: scale($theme-primary, 10%);
                 }
             }
             .nav > li > a,
@@ -348,4 +348,3 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: $theme-dark;
 }
-
