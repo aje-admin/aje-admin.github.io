@@ -27,6 +27,15 @@ a {
     }
 }
 
+a.opaque {
+    @include transition-all;
+    color: $theme-opaque;
+    &:hover,
+    &:focus {
+        color: scale($theme-opaque, 10%);
+    }
+}
+
 h1,
 h2,
 h3,
