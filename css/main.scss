@@ -43,3 +43,10 @@ $theme-opaque: #555;
         "mixins",
         "base"
 ;
+
+.logo {
+  width: 600px;   /* Adjust as needed */
+  height: auto;   /* Maintains aspect ratio */
+  display: block;
+  margin: 0 auto 20px auto;
+}
