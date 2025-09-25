@@ -1,0 +1,33 @@
+/* Logo Responsive Styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.responsive-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    width: auto;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    .responsive-logo {
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-logo {
+        max-height: 100px;
+    }
+}
+
+/* For high-density displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .responsive-logo {
+        /* Use higher resolution image if available */
+        /* You can specify a different src using JavaScript or CSS techniques */
+    }
+}
