@@ -27,8 +27,8 @@
 	&.active,
 	.open > .dropdown-toggle & {
 		color: $color;
-		background-color: scale($background, 5%);
-    border-color: scale($border, 7%);
+		background-color: scale-color($background, $lightness: -5%);
+    border-color: scale-color($border, $lightness: -7%);
 	}
 	&:active,
 	&.active,

@@ -12,6 +12,8 @@ hr {
     border-color: $theme-primary;
     border-width: 3px;
     max-width: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 hr.light {
@@ -23,7 +25,7 @@ a {
     color: $theme-primary;
     &:hover,
     &:focus {
-        color: scale($theme-primary, 10%);
+        color: scale-color($theme-primary, $lightness: -10%);
     }
 }
 
@@ -32,7 +34,7 @@ a.opaque {
     color: $theme-opaque;
     &:hover,
     &:focus {
-        color: scale($theme-opaque, 10%);
+        color: scale-color($theme-opaque, $lightness: -10%);
     }
 }
 
@@ -63,12 +65,15 @@ dd {
     margin-left: 20px;
 }
 
+// Bootstrap 4+ generates .bg-*/.text-* utilities with !important so they always
+// win regardless of stylesheet order - our same-named theme overrides need it too.
 .bg-primary {
-    background-color: $theme-primary;
+    background-color: $theme-primary !important;
+    color: white;
 }
 
 .bg-dark {
-    background-color: $theme-dark;
+    background-color: $theme-dark !important;
     color: white;
 }
 
@@ -95,14 +100,14 @@ aside {
     border-color: rgba($theme-dark, .5);
     @include sans-serif-font;
     @include transition-all;
-    .navbar-header .navbar-brand {
+    .navbar-brand {
         color: $theme-primary;
         @include sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
         &:hover,
         &:focus {
-            color: scale($theme-primary, 10%);
+            color: scale-color($theme-primary, $lightness: -10%);
         }
     }
     .nav {
@@ -132,7 +137,7 @@ aside {
     @media (min-width: 768px) {
         background-color: transparent;
         border-color: rgba(white, .3);
-        .navbar-header .navbar-brand {
+        .navbar-brand {
             color: rgba(white, .7);
             &:hover,
             &:focus {
@@ -149,12 +154,12 @@ aside {
         &.affix {
             background-color: white;
             border-color: rgba($theme-dark, .5);
-            .navbar-header .navbar-brand {
+            .navbar-brand {
                 color: $theme-primary;
                 font-size: 14px;
                 &:hover,
                 &:focus {
-                    color: scale($theme-primary, 10%);
+                    color: scale-color($theme-primary, $lightness: -10%);
                 }
             }
             .nav > li > a,
@@ -307,7 +312,7 @@ header {
 
 // Bootstrap Overrides
 .text-primary {
-    color: $theme-primary;
+    color: $theme-primary !important;
 }
 
 .no-gutter > [class*='col-'] {
